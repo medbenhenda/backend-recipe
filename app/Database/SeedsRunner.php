@@ -4,6 +4,7 @@ use App\Database\Seeds\Seeder;
 use App\Database\Seeds\Testing\BoardsSeeder;
 use App\Database\Seeds\Testing\CommentsSeeder;
 use App\Database\Seeds\Testing\PostsSeeder;
+use App\Database\Seeds\Testing\RecipesSeeder;
 use App\Database\Seeds\Testing\RolesSeeder;
 use App\Database\Seeds\Testing\UsersSeeder;
 use Doctrine\DBAL\Connection;
@@ -33,6 +34,7 @@ class SeedsRunner
             BoardsSeeder::class,
             PostsSeeder::class,
             CommentsSeeder::class,
+            RecipesSeeder::class,
         ];
     }
 

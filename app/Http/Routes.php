@@ -6,11 +6,13 @@ use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\RecipesController;
 use App\Http\Controllers\HomeController;
 use App\Schemes\BoardSchema;
 use App\Schemes\PostSchema;
 use App\Schemes\RoleSchema;
 use App\Schemes\UserSchema;
+use App\Schemes\RecipeSchema;
 use Limoncello\Core\Contracts\Routing\GroupInterface as GI;
 use Limoncello\Core\Contracts\Routing\GroupInterface;
 use Limoncello\Core\Contracts\Routing\RouteInterface as RI;
@@ -103,6 +105,7 @@ trait Routes
                 $addRelationship($group, BoardSchema::REL_POSTS, BoardsController::class, 'readPosts');
 
                 $addResource($group, CommentsController::class);
+                $addResource($group, RecipesController::class);
 
                 $addResource($group, PostsController::class);
                 $addRelationship($group, PostSchema::REL_COMMENTS, PostsController::class, 'readComments');

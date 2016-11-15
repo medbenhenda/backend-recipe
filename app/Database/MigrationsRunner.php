@@ -5,6 +5,7 @@ use App\Database\Migrations\CommentsMigration;
 use App\Database\Migrations\DateTimeFunctionMigration;
 use App\Database\Migrations\Migration;
 use App\Database\Migrations\PostsMigration;
+use App\Database\Migrations\RecipesMigration;
 use App\Database\Migrations\RolesMigration;
 use App\Database\Migrations\UsersMigration;
 use Doctrine\DBAL\Connection;
@@ -30,6 +31,7 @@ class MigrationsRunner
             UsersMigration::class,
             PostsMigration::class,
             CommentsMigration::class,
+            RecipesMigration::class,
             DateTimeFunctionMigration::class,
         ];
     }
